@@ -36,7 +36,7 @@ A modular Discord bot for managing Stremio libraries with AI-powered recommendat
 - Admin-only detailed diagnostics
 
 ### 🖼️ Metadata
-- Integrated with aiometadata for fast poster fetching
+- Integrated with AIOmetadata for fast poster fetching
 - Enhanced poster quality with RPDB (Rating Poster Database) support
 - **Automatic TMDB fallback** when metadata service is unavailable
 - Configurable poster database keys (free and premium tiers)
@@ -55,7 +55,7 @@ cp .env.example .env
 python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
 
 # Edit .env and add your credentials
-nano .env
+vi .env
 ```
 
 ### 2. Security Setup (Recommended)
@@ -176,7 +176,7 @@ RPDB_KEY=t0-free-rpdb  # Default: free tier. Premium users can use their own key
 BOT_LANG=ENGLISH  # Options: ENGLISH, DUTCH
 
 # Docker Container Monitoring
-MONITORED_CONTAINERS=easy,stremthru,hiedra,aio_v2.17.2,postgres,metadata,metadata_redis,mediaflow
+MONITORED_CONTAINERS=container1,container2,container3,...
 # Comma-separated list. Leave empty to disable /status command
 
 # Security Configuration
@@ -189,7 +189,7 @@ Configure monitored containers via the `.env` file:
 
 ```env
 # Comma-separated list of container names to monitor
-MONITORED_CONTAINERS=easy,stremthru,hiedra,aio_v2.17.2,postgres,metadata,metadata_redis,mediaflow
+MONITORED_CONTAINERS=container1,container2,container3,...
 ```
 
 **Features:**
