@@ -1,0 +1,143 @@
+# Dutch Language File for Stremio Discord Bot
+# Format: KEY=Translation
+# Lines starting with # are comments
+
+# Bot initialization messages
+INIT_BOT=🔧 Initializing bot...
+INIT_SUCCESS=✅ Bot initialized
+LOADING_COGS=🔧 Loading cogs...
+LOADING_SEARCH_COG=  Loading search cog...
+LOADING_LIBRARY_COG=  Loading library cog...
+LOADING_ADMIN_COG=  Loading admin cog...
+LOADING_HELP_COG=  Loading help cog...
+COG_LOADED=  ✅ {cog} cog loaded
+ALL_COGS_LOADED=✅ All cogs loaded successfully
+FAILED_LOAD_COGS=❌ Failed to load cogs: {error}
+
+# Bot ready messages
+BOT_READY=✅ Bot is READY and CONNECTED!
+LOGGED_IN_AS=   Logged in as: {name}
+BOT_ID=   Bot ID: {id}
+CONNECTED_TO_SERVERS=   Connected to {count} server(s)
+SHUTTING_DOWN=🔄 Shutting down...
+SHUTDOWN_COMPLETE=✅ Bot shutdown complete
+
+# Starting messages
+STARTING_BOT=🚀 Starting Stremio Discord Bot...
+LOADING_CONFIG=📋 Loading configuration...
+CONFIG_ERROR=❌ Config error: {error}
+CREATING_BOT=🤖 Creating bot instance...
+CONNECTING_DISCORD=🔌 Connecting to Discord...
+INVALID_TOKEN=❌ Invalid BOT_TOKEN - check your .env file
+INTERRUPTED=⚠️ Interrupted by user
+FATAL_ERROR=❌ Fatal error: {error}
+BOT_STOPPED=👋 Bot stopped by user
+UNEXPECTED_ERROR=❌ Unexpected error: {error}
+
+# Bot presence
+BOT_PRESENCE=Stremio libraries | /help
+
+# Error messages
+ERROR_COMMAND_NOT_FOUND=❌ Onbekend commando. Gebruik `!help` voor een lijst van commando's.
+ERROR_MISSING_ARGUMENT=❌ Ontbrekend argument: `{param}`
+    Gebruik `!help` voor meer info.
+ERROR_DM_ONLY=❌ Dit commando werkt alleen in DMs
+ERROR_NO_DM=❌ Dit commando werkt niet in DMs
+ERROR_COMMAND_FAILED=❌ Er is een fout opgetreden bij het uitvoeren van dit commando.
+
+# Help command
+HELP_TITLE=📋 Stremio Bot Commando's
+HELP_DESCRIPTION=Alle commando's zijn slash commando's. Begin met typen van `/` om beschikbare commando's te zien!
+HELP_SEARCH_TITLE=🎬 Zoeken & Aanbevelingen
+HELP_SEARCH_VALUE=`/film <query>` - Zoek filmenaanbevelingen met AI
+    Voorbeeld: `/film query: sci-fi zoals Inception`
+
+    `/serie <query>` - Zoek serieaanbevelingen met AI
+    Voorbeeld: `/serie query: mystery zoals True Detective`
+HELP_LIBRARY_TITLE=📚 Bibliotheek
+HELP_LIBRARY_VALUE=`/library` - Bekijk je bibliotheek (grid met posters)
+    `/library filter: All (List)` - Toon alle items in tabelformaat
+    `/library filter: Movies Only` - Toon alleen films in tabel
+    `/library filter: Series Only` - Toon alleen series in tabel
+
+    💡 Klik op items om ze te delen of verwijderen
+HELP_WATCHED_TITLE=📜 Bekeken/Verwijderde Items
+HELP_WATCHED_VALUE=`/watched` - Bekijk alle bekeken/verwijderde items
+    `/watched filter_type: Movies Only` - Toon alleen bekeken films
+    `/watched filter_type: Series Only` - Toon alleen bekeken series
+    `/watched use_advanced: True` - Open modal voor datum filter
+
+    📅 Geavanceerde filtering laat je filteren op datum bereik!
+HELP_AUTH_TITLE=🔐 Authenticatie
+HELP_AUTH_VALUE=`/setauth <auth_key>` - Stel je Stremio auth key in (alleen DM)
+    `/removeauth` - Verwijder je auth key (alleen DM)
+    `/checkauth` - Controleer of auth key is ingesteld (alleen DM)
+
+    ⚠️ **Eerste keer?** Stuur me een DM en gebruik:
+    `/setauth auth_key: <jouw_key>`
+HELP_SYSTEM_TITLE=🔧 Systeem
+HELP_SYSTEM_VALUE=`/status` - Check Docker container status
+HELP_ADMIN_TITLE=👑 Admin Commando's
+HELP_ADMIN_VALUE=`/ping` - Test bot responsiveness (alleen admin)
+    `/restart <container_name>` - Herstart een container (alleen admin)
+    `/whoami` - Toon je user ID en admin status
+HELP_FOOTER=💡 Tip: Alle commando's gebruiken Discord's slash commando systeem. Type / om alle beschikbare commando's te zien!
+
+# Search commands
+SEARCH_USAGE_FILM=Gebruik: `!film <omschrijving>`
+SEARCH_USAGE_SERIE=Gebruik: `!serie <omschrijving>`
+SEARCHING_FILMS=🎬 Aan't zoeken naar films...
+SEARCHING_SERIES=📺 Aan't zoeken naar series...
+CLICK_TO_ADD=**Klik om toe te voegen:**
+
+# Library commands
+LIBRARY_NO_AUTH=❌ Stuur me een DM met `!setauth <jouw_key>`
+LIBRARY_FETCHING=🔄 Bibliotheek ophalen...
+LIBRARY_EMPTY=Je bibliotheek is leeg!
+LIBRARY_TITLE=📚 Stremio Bibliotheek
+LIBRARY_PAGE=Pagina {page}
+LIBRARY_TOTAL_ITEMS=Totaal {count} items
+LIBRARY_ITEM_OF=Item {current} van {total}
+
+# Library item details
+STATUS_WATCHED=✅ Bekeken
+STATUS_NOT_WATCHED=⏳ Niet bekeken
+ITEM_TYPE=**Type:** {type}
+ITEM_STATUS=**Status:** {status}
+ITEM_ID=**ID:** `{id}`
+
+# Auth commands
+SETAUTH_USAGE=Gebruik: `!setauth <jouw_stremio_auth_key>`
+SETAUTH_SUCCESS=✅ Auth key ingesteld!
+REMOVEAUTH_SUCCESS=✅ Auth key verwijderd.
+REMOVEAUTH_NONE=❌ Geen auth key ingesteld.
+
+# Admin commands
+ADMIN_NO_PERMISSION=❌ Geen permissie
+ADMIN_PING_RESPONSE=🏓 Pong!
+ADMIN_DOCKER_UNAVAILABLE=❌ Docker niet beschikbaar
+ADMIN_STATUS_TITLE=**Service Status**
+ADMIN_STATUS_ALL_OK=✅ Alle systemen operationeel
+ADMIN_STATUS_ISSUES=⚠️ Sommige services hebben problemen. Admin is op de hoogte gesteld.
+ADMIN_RESTART_USAGE=Gebruik: `!restart <container_name>`
+ADMIN_RESTART_SUCCESS=✅ **{container}** herstart!
+ADMIN_RESTART_ERROR=❌ Error: {error}
+ADMIN_WHOAMI_RESPONSE=User ID: `{user_id}`
+    Is Admin: {is_admin}
+
+# Add to library view
+ADD_NO_AUTH=❌ Je hebt nog geen Stremio auth key ingesteld. Stuur me een DM met `!setauth <jouw_key>`.
+ADD_SUCCESS=✅ **{title}** toegevoegd!
+    ID: `{id}`
+ADD_FAILED=❌ Kon niet toevoegen: {message}
+ADD_NOT_FOUND=❌ Kon **{title}** niet vinden op TMDB.
+
+# Pagination buttons
+BUTTON_PREVIOUS=◀️ Vorige
+BUTTON_NEXT=Volgende ▶️
+
+# Content types
+TYPE_MOVIE=🎬
+TYPE_SERIES=📺
+TYPE_MOVIE_NAME=film
+TYPE_SERIES_NAME=serie

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  stremiobot-v2:
+    build: .
+    container_name: stremiobot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - CHANNEL_COMMAND_ID=${CHANNEL_COMMAND_ID}
+      - ADMIN_USER_ID=${ADMIN_USER_ID}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - TMDB_API_KEY=${TMDB_API_KEY}
+      - METADATA_URL=${METADATA_URL}
+      - RPDB_KEY=${RPDB_KEY:-t0-free-rpdb}
+      - BOT_LANG=${BOT_LANG}
+      - MONITORED_CONTAINERS=${MONITORED_CONTAINERS}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/app/data
+      # Mount encryption key from host (read-only)
+      # Create the key file on host: /opt/stremiobot/secrets/fernet.key
+      - /opt/stremiobot/secrets/fernet.key:/run/secrets/fernet.key:ro
+    networks:
+      - metadata_default
+
+networks:
+  metadata_default:
+    external: true

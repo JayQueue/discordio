@@ -1,0 +1,143 @@
+# English Language File for Stremio Discord Bot
+# Format: KEY=Translation
+# Lines starting with # are comments
+
+# Bot initialization messages
+INIT_BOT=🔧 Initializing bot...
+INIT_SUCCESS=✅ Bot initialized
+LOADING_COGS=🔧 Loading cogs...
+LOADING_SEARCH_COG=  Loading search cog...
+LOADING_LIBRARY_COG=  Loading library cog...
+LOADING_ADMIN_COG=  Loading admin cog...
+LOADING_HELP_COG=  Loading help cog...
+COG_LOADED=  ✅ {cog} cog loaded
+ALL_COGS_LOADED=✅ All cogs loaded successfully
+FAILED_LOAD_COGS=❌ Failed to load cogs: {error}
+
+# Bot ready messages
+BOT_READY=✅ Bot is READY and CONNECTED!
+LOGGED_IN_AS=   Logged in as: {name}
+BOT_ID=   Bot ID: {id}
+CONNECTED_TO_SERVERS=   Connected to {count} server(s)
+SHUTTING_DOWN=🔄 Shutting down...
+SHUTDOWN_COMPLETE=✅ Bot shutdown complete
+
+# Starting messages
+STARTING_BOT=🚀 Starting Stremio Discord Bot...
+LOADING_CONFIG=📋 Loading configuration...
+CONFIG_ERROR=❌ Config error: {error}
+CREATING_BOT=🤖 Creating bot instance...
+CONNECTING_DISCORD=🔌 Connecting to Discord...
+INVALID_TOKEN=❌ Invalid BOT_TOKEN - check your .env file
+INTERRUPTED=⚠️ Interrupted by user
+FATAL_ERROR=❌ Fatal error: {error}
+BOT_STOPPED=👋 Bot stopped by user
+UNEXPECTED_ERROR=❌ Unexpected error: {error}
+
+# Bot presence
+BOT_PRESENCE=Stremio libraries | /help
+
+# Error messages
+ERROR_COMMAND_NOT_FOUND=❌ Unknown command. Use `!help` for a list of commands.
+ERROR_MISSING_ARGUMENT=❌ Missing argument: `{param}`
+    Use `!help` for more info.
+ERROR_DM_ONLY=❌ This command only works in DMs
+ERROR_NO_DM=❌ This command doesn't work in DMs
+ERROR_COMMAND_FAILED=❌ An error occurred while executing this command.
+
+# Help command
+HELP_TITLE=📋 Stremio Bot Commands
+HELP_DESCRIPTION=All commands are slash commands. Start typing `/` to see available commands!
+HELP_SEARCH_TITLE=🎬 Search & Recommendations
+HELP_SEARCH_VALUE=`/film <query>` - Search for movie recommendations using AI
+    Example: `/film query: sci-fi like Inception`
+
+    `/serie <query>` - Search for series recommendations using AI
+    Example: `/serie query: mystery like True Detective`
+HELP_LIBRARY_TITLE=📚 Library
+HELP_LIBRARY_VALUE=`/library` - View your library (grid with posters)
+    `/library filter: All (List)` - Show all items in table format
+    `/library filter: Movies Only` - Show only movies in table
+    `/library filter: Series Only` - Show only series in table
+
+    💡 Click on items to share or remove them
+HELP_WATCHED_TITLE=📜 Watched/Removed Items
+HELP_WATCHED_VALUE=`/watched` - View all watched/removed items
+    `/watched filter_type: Movies Only` - Show only watched movies
+    `/watched filter_type: Series Only` - Show only watched series
+    `/watched use_advanced: True` - Open modal for date range filtering
+
+    📅 Advanced filtering lets you filter by date range!
+HELP_AUTH_TITLE=🔐 Authentication
+HELP_AUTH_VALUE=`/setauth <auth_key>` - Set your Stremio auth key (DM only)
+    `/removeauth` - Remove your auth key (DM only)
+    `/checkauth` - Check if auth key is set (DM only)
+
+    ⚠️ **First time?** Send me a DM and use:
+    `/setauth auth_key: <your_key>`
+HELP_SYSTEM_TITLE=🔧 System
+HELP_SYSTEM_VALUE=`/status` - Check Docker container status
+HELP_ADMIN_TITLE=👑 Admin Commands
+HELP_ADMIN_VALUE=`/ping` - Test bot responsiveness (admin only)
+    `/restart <container_name>` - Restart a container (admin only)
+    `/whoami` - Show your user ID and admin status
+HELP_FOOTER=💡 Tip: All commands use Discord's slash command system. Type / to see all available commands!
+
+# Search commands
+SEARCH_USAGE_FILM=Usage: `!film <description>`
+SEARCH_USAGE_SERIE=Usage: `!serie <description>`
+SEARCHING_FILMS=🎬 Searching for films...
+SEARCHING_SERIES=📺 Searching for series...
+CLICK_TO_ADD=**Click to add:**
+
+# Library commands
+LIBRARY_NO_AUTH=❌ Send me a DM with `!setauth <your_key>`
+LIBRARY_FETCHING=🔄 Fetching library...
+LIBRARY_EMPTY=Your library is empty!
+LIBRARY_TITLE=📚 Stremio Library
+LIBRARY_PAGE=Page {page}
+LIBRARY_TOTAL_ITEMS=Total {count} items
+LIBRARY_ITEM_OF=Item {current} of {total}
+
+# Library item details
+STATUS_WATCHED=✅ Watched
+STATUS_NOT_WATCHED=⏳ Not watched
+ITEM_TYPE=**Type:** {type}
+ITEM_STATUS=**Status:** {status}
+ITEM_ID=**ID:** `{id}`
+
+# Auth commands
+SETAUTH_USAGE=Usage: `!setauth <your_stremio_auth_key>`
+SETAUTH_SUCCESS=✅ Auth key set!
+REMOVEAUTH_SUCCESS=✅ Auth key removed.
+REMOVEAUTH_NONE=❌ No auth key set.
+
+# Admin commands
+ADMIN_NO_PERMISSION=❌ No permission
+ADMIN_PING_RESPONSE=🏓 Pong!
+ADMIN_DOCKER_UNAVAILABLE=❌ Docker not available
+ADMIN_STATUS_TITLE=**Service Status**
+ADMIN_STATUS_ALL_OK=✅ All systems operational
+ADMIN_STATUS_ISSUES=⚠️ Some services are experiencing issues. Admin has been notified.
+ADMIN_RESTART_USAGE=Usage: `!restart <container_name>`
+ADMIN_RESTART_SUCCESS=✅ **{container}** restarted!
+ADMIN_RESTART_ERROR=❌ Error: {error}
+ADMIN_WHOAMI_RESPONSE=User ID: `{user_id}`
+    Is Admin: {is_admin}
+
+# Add to library view
+ADD_NO_AUTH=❌ You haven't set a Stremio auth key yet. Send me a DM with `!setauth <your_key>`.
+ADD_SUCCESS=✅ **{title}** added!
+    ID: `{id}`
+ADD_FAILED=❌ Could not add: {message}
+ADD_NOT_FOUND=❌ Could not find **{title}** on TMDB.
+
+# Pagination buttons
+BUTTON_PREVIOUS=◀️ Previous
+BUTTON_NEXT=Next ▶️
+
+# Content types
+TYPE_MOVIE=🎬
+TYPE_SERIES=📺
+TYPE_MOVIE_NAME=movie
+TYPE_SERIES_NAME=series
