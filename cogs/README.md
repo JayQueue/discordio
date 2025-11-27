@@ -139,7 +139,7 @@ Result: Shows all removed movies (watched or not) from 2024
 **Monitored Containers:**
 Configured in `.env` (comma-separated list):
 ```env
-MONITORED_CONTAINERS=easy,stremthru,hiedra,aio_v2.17.2,postgres,metadata,metadata_redis,mediaflow
+MONITORED_CONTAINERS=container1,container2,container3,...
 ```
 
 Leave empty or unset to disable the `/status` command.
