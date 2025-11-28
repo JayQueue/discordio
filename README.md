@@ -15,6 +15,7 @@ A modular Discord bot for managing Stremio libraries with AI-powered recommendat
 - Filter by content type (movies, series, or all)
 - Multiple view modes (grid with posters, table list)
 - Share library items to channels or via DM
+- Remove items from your list
 - Track watched/removed items with date filtering
 
 ### 🔐 Security
